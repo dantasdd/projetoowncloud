@@ -1,19 +1,18 @@
-Projeto elaborado com o proposito de demonstra práticas devops em provisionamento de infraestrutura como codigo.
+Projeto foi elaborado com o proposito de demonstra práticas DevOps em provisionamento de infraestrutura como codigo, demonstrando formas de se trabalhar com ambiente de Microservicos.
 
 Foram utilizados nesse eco-sistema: 
-. 2 servidores centos-7 On-primeses VMware Workstation e um provedor de servicos em nuvem "GCP"
+2 servidores centos-7 On-primeses VMware Workstation e um provedor de servicos em nuvem "GCP".
 
-. Servidor1-ansible: Responsavel por provisionar a instalação do produto Terraform e criar diretorios e repositorios de
+. Servidor1-ansible: Responsavel por provisionar a instalação do produto Terraform e criar diretorios,repositorios de
 conexao com o GCP no servidor2-terraform.
  
-.Servidor2-Terraform: Responsavel por provisionar a instalação do SDK-GCP, provisionar a instancia 'GKE'-PAAS  e criar uma imagem (Owncloud) em 
-cluster no kubernetes.
+. Servidor2-Terraform: Responsavel por provisionar a instalação do SDK-GCP, instanciar um GKE-'PAAS', criar a imagem (Owncloud) em cluster utilizando a orquestração do kubernetes.
 
 (Estrutura Servidor Ansible)
 
-Executando os playbooks arquivo .YML para provisionar máquina local Terraform
+Executando os playbooks arquivo .YML para provisionar máquina local Terraform.
 
-# Criando diretorio/repositorio do GCP no servidor 
+# Criando diretorio/repositorio do GCP no servidor terraform
 
 - name: 1 - Configurando diretorio google
   hosts: terraform
@@ -72,8 +71,7 @@ gpgkey=
 
 (Estrutura Servidor Terraform)
 
-Executando os arquivo .tf para provisionar o GCP
-
+Executando os arquivo .tf para provisionar o GCP, instanciando uma imagem do owncloud em cluster no Kubernetes. 
 
 # Script Responsavel pelo deploy da instancia (PAAS) GKE no GCP
 
