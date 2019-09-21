@@ -1,0 +1,23 @@
+- name: 1 - Configurando diretorio google
+  hosts: terraform  
+
+  tasks:
+  - name: criando diretorio para o google
+    file:
+     path: google_cloud
+     state: directory
+
+  - name: copy key file to a remote server
+    copy:
+     src:  /root/devops-geofusion/terraform-key.json
+     dest:  /root/google_cloud
+     backup: yes
+
+  - name: atualiza repositorio
+    copy:
+     src: /root/devops-geofusion/google-cloud-sdk.repo
+     dest: /etc/yum.repos.d/google-cloud-sdk.repo
+
+  - name: google SDK
+    package: name=google-cloud-sdk state=latest
+
