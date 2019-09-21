@@ -1,4 +1,4 @@
-Projeto foi elaborado com o proposito de demonstra práticas DevOps em provisionamento de infraestrutura como codigo, demonstrando formas de se trabalhar com ambiente de Microservicos.
+Projeto foi elaborado com o proposito de demonstra práticas DevOps em provisionamento de infraestrutura como codigo, propondo formas de se trabalhar com ambiente de Microservicos.
 
 Foram utilizados nesse eco-sistema: 
 2 servidores centos-7 On-primeses VMware Workstation e um provedor de servicos em nuvem "GCP".
