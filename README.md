@@ -1,9 +1,11 @@
+Deploy da imagem Owncloud no GKE utilizando ferramentas Ansible e terraform 
+
 Projeto foi elaborado com o proposito de demonstra práticas DevOps em provisionamento de infraestrutura como codigo, propondo formas de se trabalhar com ambiente de Microservicos.
 
 Foram utilizados nesse eco-sistema: 
 2 servidores centos-7 On-primeses VMware Workstation e um provedor de servicos em nuvem "GCP".
 
-. Servidor1-ansible: Responsavel por provisionar a instalação do produto Terraform e criar diretorios,repositorios de
+. Servidor1-Ansible: Responsavel por provisionar a instalação do produto Terraform e criar diretorios,repositorios de
 conexao com o GCP no servidor2-terraform.
  
 . Servidor2-Terraform: Responsavel por provisionar a instalação do SDK-GCP, instanciar um GKE-'PAAS', criar a imagem (Owncloud) em cluster utilizando a orquestração do kubernetes.
@@ -114,7 +116,7 @@ resource "google_container_cluster" "primary" {
 
 
 
-# Script Responsavel por gerar a imagem do owncloud no kubernetes
+# Script Responsavel pelo deploy da imagem do owncloud no kubernetes via terraform
 
 provider "kubernetes" {
   host = ""
