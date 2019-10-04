@@ -1,4 +1,4 @@
-Deploy da imagem Owncloud no GKE utilizando ferramentas Ansible e terraform 
+Deploy da imagem Owncloud em ambiente de microservicos utilizando provedor de computação em nuvem Google Cloud.
 
 Projeto foi elaborado com o proposito de demonstra práticas DevOps em provisionamento de infraestrutura como codigo, propondo formas de se trabalhar com ambiente de Microservicos.
 
